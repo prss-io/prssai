@@ -1,6 +1,6 @@
 <p>
   
-  <h2>prssai</h2>
+  <h1>prssai</h1>
   <blockquote>PRSS AI Companion. Research & Create articles for PRSS Site Creator</blockquote>
 
   ### 📦 Installation
@@ -15,10 +15,11 @@
   ### ✳️ Commands
 
   #### article
-  Generates an article based on the parameters set in your `.env` file
+  Generates an article based on the parameters set in your `.env` file.
   ```bash
   ./article [topic of your article]
   ```
+  ![article2](https://github.com/prss-io/prssai/assets/25509135/38068568-1cda-481b-8ecb-35d1c98e43e4)
 
   #### prompt
   Ask any question to the model. Useful for asking follow-up questions about the article or revised sentences.
