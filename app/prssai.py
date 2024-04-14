@@ -59,9 +59,9 @@ class PRSSAI:
       with open(content, 'r') as file:
         file_content = file.read()
         self.echo("Loader", f"\"{content}\" is being remembered.")
-        return f"Refer to this research in the future: {file_content}"
+        return f"Use this research for your future reponses: {file_content}"
     elif remember:
-      return f"Refer to this research in the future: {content}"
+      return f"Use this research for your future reponses: {content}"
     else:
       self.echo("Prompt", content)
       return content
@@ -71,8 +71,10 @@ class PRSSAI:
     action_output = ""
     if action == "Loader":
       action_output = f"{BgColor.GREEN}{Color.BLACK} {action} {Color.OFF}"
-    if action == "Memory":
-      action_output = f"{BgColor.GREEN}{Color.BLACK} {action} {Color.OFF}"
+    elif action == "Search":
+      action_output = f"{BgColor.WHITE}{Color.BLACK} {action} {Color.OFF}"
+    elif action == "Memory":
+      action_output = f"{BgColor.YELLOW}{Color.BLACK} {action} {Color.OFF}"
     else:
       action_output = f"{BgColor.CYAN}{Color.BLACK} {action} {Color.OFF}"
 
@@ -83,32 +85,40 @@ class PRSSAI:
     ctx = self.get_context()
     response = self.ollama.generate(model=self.model, prompt=prompt, system=self.system_prompt, context=ctx)
     self.set_context(response['context'])
-    print(response['response'])
+    if not remember:
+      print(response['response'])
     return response['response']
   
   def run(self, command):
     try:
       self.command = command
 
-      # fetch existing research, if any
-      if not self.get_command_memo():
-        # research information about the subject
-        research = self.browser.search(self.command)
+      # if we are passing a path as param, we will only load the file into memory
+      if self.command.startswith("./"):
+        self.generate(self.command)
+        
+      else: 
+        # fetch existing research, if any
+        if not self.get_command_memo():
+          self.echo("Search", f'Get information about "{self.command}"')
 
-        # save research in memory to prevent searching again
-        self.set_command_memo(research)
+          # research information about the subject
+          research = self.browser.search(self.command)
 
-        # talk to model about research
-        self.generate(research, True)
+          # save research in memory to prevent searching again
+          self.set_command_memo(research)
 
-      # generate prompt with desired output and constraints
-      format = ''.join(self.res_format)
-      word_count = ''.join(self.res_word_count)
-      seo_keywords = self.res_seo_keywords
-      self.generate(f"""
-        Create a {format} on the following topic "{self.command}".
-        The resulting text must have {word_count} words and start with a headline.
-        Important: the text should also contain one of the following words: {seo_keywords}
-      """)
+          # talk to model about research
+          self.generate(research, True)
+
+        # generate prompt with desired output and constraints
+        format = ''.join(self.res_format)
+        word_count = ''.join(self.res_word_count)
+        seo_keywords = self.res_seo_keywords
+        self.generate(f"""
+          Create a {format} on the following topic "{self.command}".
+          The resulting text must have {word_count} words and start with a headline.
+          Important: the text should also contain one of the following words: {seo_keywords}
+        """)
     except Exception:
       self.redis.close()
