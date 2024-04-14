@@ -1,7 +1,6 @@
 <p>
-  
-  <h1>prssai</h1>
-  <blockquote>PRSS AI Companion. Research & Create articles for PRSS Site Creator</blockquote>
+  <img src="https://github.com/prss-io/prssai/assets/25509135/e2eca5d6-27c3-4c72-9e50-d1843e8e909a" width="200" />
+  <blockquote>PRSS AI Companion. Research & Create articles for <a href="https://github.com/hodgef/PRSS">PRSS Site Creator</a>.</blockquote>
 
   ### 📦 Installation
   - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
@@ -66,5 +65,5 @@
 
 <div align="right">
   <br />
-  <p><a href="https://prss.io"><img src="https://i.imgur.com/5OQD7eL.png" width="130" /></a></p>
+  <p><a href="https://prss.io"><img src="https://github.com/prss-io/prssai/assets/25509135/a0f1a975-50a0-4d2f-962c-3d5b462fe091" width="130" /></a></p>
 </div>
