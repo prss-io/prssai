@@ -20,11 +20,20 @@
   ```
   ![article2](https://github.com/prss-io/prssai/assets/25509135/38068568-1cda-481b-8ecb-35d1c98e43e4)
 
+  This command can also load text files as reference. Path is relative to the container, so use the `./app/files` directory for this feature.
+
+  ![article3](https://github.com/prss-io/prssai/assets/25509135/00102a4d-d5d1-4fed-a014-e7286a0a7d08)
+
+
+
   #### prompt
   Ask any question to the model. Useful for asking follow-up questions about the article or revised sentences.
   ```bash
   ./prompt [your question]
   ```
+  ![articleb](https://github.com/prss-io/prssai/assets/25509135/d2c92652-7514-46a8-a103-57c2fda5baee)
+
+
 
   #### shell
   Enter the `sh` shell for the python container.
