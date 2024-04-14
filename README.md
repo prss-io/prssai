@@ -5,7 +5,7 @@
   ### 📦 Installation
   - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
   - Install [Ollama](https://github.com/ollama/ollama)
-  - `ollama pull dolphin-mistral:7b-v2.2.1` or [choose another model](https://ollama.com/) according to your system specs.
+  - `ollama pull dolphin-mistral:7b-v2.2.1` or [choose another model](https://ollama.com/) according to your preference.
   - Clone this repository
   - Rename `example.env` to `.env` and edit accordingly.
   - Open a terminal in the `./bin` directory. and run `./install`.
