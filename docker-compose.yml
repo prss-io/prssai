@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  chrome:
+    image: selenium/standalone-chrome:latest
+    container_name: prssai_chrome
+    restart: unless-stopped
+    shm_size: 2g
+    ports:
+      - "4444:4444"
+      
+  redis:
+    image: redis/redis-stack-server:latest
+    restart: unless-stopped
+    container_name: prssai_redis
+    volumes:
+      - "./data:/data"
+    ports:
+      - 6379
+
+  worker:
+    image: prssai
+    depends_on:
+      - chrome
+      - redis
+    container_name: prssai_worker
+    working_dir: /app
+    command: tail -f /dev/null
+    restart: unless-stopped
+    volumes:
+      - "./app:/app"
+    extra_hosts:
+    - "localhost:host-gateway"
+    - "host.docker.internal:host-gateway"
+  

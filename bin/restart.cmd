@@ -1,0 +1,2 @@
+call ./stop
+call ./start

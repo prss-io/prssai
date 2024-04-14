@@ -1,0 +1,7 @@
+python-dotenv
+requests
+bs4
+ollama
+selenium
+redis
+colorist

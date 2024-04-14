@@ -1,0 +1,11 @@
+*
+!.gitignore
+!.gitkeep
+!bin/*
+!requirements.txt
+!docker-compose.yml
+!Dockerfile
+!example.env
+!README.md
+!app/*.py
+!*/
