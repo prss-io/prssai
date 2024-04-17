@@ -22,7 +22,7 @@
 
   #### Prompt
 
-  Ask the model anything. It will have memory of the previous conversations and articles generated. To forget the history, prompt it with "erase history".
+  Ask the model anything. It will have memory of the previous conversations and articles generated. To forget the history, prompt it with "erase history". The memory is stored locally in the [`prssai_redis` container](https://github.com/prss-io/prssai/blob/master/docker-compose.yml#L12).
 
   ![image](https://github.com/prss-io/prssai/assets/25509135/886f85a9-e60e-4315-b921-7ad7716ed52c)
 
