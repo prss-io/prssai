@@ -7,7 +7,7 @@
   - Install [PRSS Site Creator](https://prss.io/) (for GUI management and enhanced features)
   - `ollama pull dolphin-mistral:7b-v2.2.1` or [choose another model](https://ollama.com/) according to your preference.
   - Clone this repository
-  - Rename `example.env` to `.env` and edit accordingly.
+  - Rename `./app/example.env` to `./app/.env` and edit accordingly.
   - Open a terminal and run `./install` from the `./bin` directory.
 
   ### ✳️ Usage in PRSS
@@ -17,7 +17,7 @@
   To run the following commands, you must do so from the `./bin` directory after setup.
 
   #### article
-  Generates an article based on the parameters set in your `.env` file.
+  Generates an article based on the parameters set in your `./app/.env` file.
   ```bash
   ./article [topic of your article]
   ```

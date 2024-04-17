@@ -17,6 +17,7 @@ class PRSSAI:
     self.res_format=res_format,
     self.res_seo_keywords=res_seo_keywords
     self.logging = True
+    self.forgot_str = "Okay. I've forgotten everything!"
 
   def get_context(self) -> list[int]:
     ctx = self.redis.get('prssai_context')
@@ -32,7 +33,7 @@ class PRSSAI:
     self.redis.delete('prssai_context')
 
   def clear_db(self):
-    self.echo("Memory", f"Okay. I've forgotten everything!")
+    self.echo("Memory", self.forgot_str)
     self.redis.flushdb()
 
   def get_command_memo(self) -> str:
@@ -87,13 +88,18 @@ class PRSSAI:
     self.browser.logging = False
 
   def generate(self, content, remember=False):
-    prompt = self.parse_content(content, remember)
-    ctx = self.get_context()
-    response = self.ollama.generate(model=self.model, prompt=prompt, system=self.system_prompt, context=ctx)
-    self.set_context(response['context'])
-    if not remember:
-      print(response['response'])
-    return response['response']
+    if content == "delete history" or content == "forget history" or content == "erase history" or content == "forget conversations":
+      self.clear_db()
+      print(self.forgot_str)
+      return self.forgot_str
+    else:
+      prompt = self.parse_content(content, remember)
+      ctx = self.get_context()
+      response = self.ollama.generate(model=self.model, prompt=prompt, system=self.system_prompt, context=ctx)
+      self.set_context(response['context'])
+      if not remember:
+        print(response['response'])
+      return response['response']
   
   def run(self, command):
     try:
