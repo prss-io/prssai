@@ -1,6 +1,6 @@
 <p>
   <img src="https://github.com/prss-io/prssai/assets/25509135/e2eca5d6-27c3-4c72-9e50-d1843e8e909a" width="200" />
-  <blockquote>PRSS AI Companion. Research & Create articles for <a href="https://github.com/hodgef/PRSS">PRSS Site Creator</a>.</blockquote>
+  <blockquote>PRSS AI Companion & Autoblogger. Research & Create articles for <a href="https://github.com/hodgef/PRSS">PRSS Site Creator</a>.</blockquote>
 
   ### 📦 Setup
   - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Ollama](https://github.com/ollama/ollama)
@@ -11,7 +11,20 @@
   - Open a terminal and run `./install` from the `./bin` directory.
 
   ### ✳️ Usage in PRSS
-  _Coming soon!_
+  > The prssai features have been introduced as of PRSS version 1.9.0. To enable it, install it from the PRSS "Addons" page.
+  
+  #### Batch generate articles (autoblogging)
+  Specify a number of topics for the AI to write about. Once complete, you will be able to review the returned text, discard entries, and transform the remaining texts to blog posts in one click.
+
+  ![image](https://github.com/prss-io/prssai/assets/25509135/da990026-cc5b-4550-a1e2-40e6683a3660)
+  
+  ![image](https://github.com/prss-io/prssai/assets/25509135/ab1fe1ce-6d1c-4e38-8273-72234a4e6854)
+
+  #### Prompt
+
+  Ask the model anything. It will have memory of the previous conversations and articles generated. To forget the history, prompt it with "erase history".
+
+  ![image](https://github.com/prss-io/prssai/assets/25509135/886f85a9-e60e-4315-b921-7ad7716ed52c)
 
   ### ✴️ Usage in Terminal
   To run the following commands, you must do so from the `./bin` directory after setup.
