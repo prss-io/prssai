@@ -16,6 +16,7 @@ class PRSSAI:
     self.res_word_count=res_word_count,
     self.res_format=res_format,
     self.res_seo_keywords=res_seo_keywords
+    self.logging = True
 
   def get_context(self) -> list[int]:
     ctx = self.redis.get('prssai_context')
@@ -67,18 +68,23 @@ class PRSSAI:
       return content
 
   def echo(self, action: str, content: str):
-    prefix = f"\n{Color.YELLOW} ● prssai {Color.OFF}"
-    action_output = ""
-    if action == "Loader":
-      action_output = f"{BgColor.GREEN}{Color.BLACK} {action} {Color.OFF}"
-    elif action == "Search":
-      action_output = f"{BgColor.WHITE}{Color.BLACK} {action} {Color.OFF}"
-    elif action == "Memory":
-      action_output = f"{BgColor.YELLOW}{Color.BLACK} {action} {Color.OFF}"
-    else:
-      action_output = f"{BgColor.CYAN}{Color.BLACK} {action} {Color.OFF}"
+    if self.logging:
+      prefix = f"\n{Color.YELLOW} ● prssai {Color.OFF}"
+      action_output = ""
+      if action == "Loader":
+        action_output = f"{BgColor.GREEN}{Color.BLACK} {action} {Color.OFF}"
+      elif action == "Search":
+        action_output = f"{BgColor.WHITE}{Color.BLACK} {action} {Color.OFF}"
+      elif action == "Memory":
+        action_output = f"{BgColor.YELLOW}{Color.BLACK} {action} {Color.OFF}"
+      else:
+        action_output = f"{BgColor.CYAN}{Color.BLACK} {action} {Color.OFF}"
 
-    print(f"{prefix}{action_output}{BgColor.OFF} {BrightColor.CYAN}{content}{BrightColor.OFF}\n")
+      print(f"{prefix}{action_output}{BgColor.OFF} {BrightColor.CYAN}{content}{BrightColor.OFF}\n")
+
+  def disable_logging(self):
+    self.logging = False
+    self.browser.logging = False
 
   def generate(self, content, remember=False):
     prompt = self.parse_content(content, remember)

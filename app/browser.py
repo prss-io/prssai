@@ -20,9 +20,11 @@ class Browser:
     self.options.add_argument('--ignore-ssl-errors=yes')
     self.options.add_argument('--ignore-certificate-errors')
     self.saved_urls = []
+    self.logging = True
 
   def echo(self, content: str):
-    print(f"{Color.GREEN} Browser | {Color.OFF}{Color.WHITE}{content}{Color.OFF}")
+    if self.logging:
+      print(f"{Color.GREEN} Browser | {Color.OFF}{Color.WHITE}{content}{Color.OFF}")
 
   def navigate(self, url: str):
     self.echo("Connecting Chrome")
