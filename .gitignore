@@ -8,4 +8,5 @@
 !example.env
 !README.md
 !app/*.py
+!app/json/*.json
 !*/

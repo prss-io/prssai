@@ -19,6 +19,10 @@ class PRSSAI:
     self.logging = True
     self.forgot_str = "Okay. I've forgotten everything!"
 
+    # Load handling of flushdb prompts
+    with open("./json/flushdb_prompts.json", 'r') as file:
+        self.forgot_prompts = json.loads(file.read())
+
   def get_context(self) -> list[int]:
     ctx = self.redis.get('prssai_context')
     return json.loads(ctx) if ctx else []
@@ -88,7 +92,7 @@ class PRSSAI:
     self.browser.logging = False
 
   def generate(self, content, remember=False):
-    if content == "delete history" or content == "forget history" or content == "erase history" or content == "forget conversations":
+    if content in self.forgot_prompts:
       self.clear_db()
       print(self.forgot_str)
       return self.forgot_str

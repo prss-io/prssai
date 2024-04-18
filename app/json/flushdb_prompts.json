@@ -1,0 +1,19 @@
+[
+    "reset history",
+    "discard history",
+    "delete history",
+    "forget history",
+    "erase history",
+    "reset conversations",
+    "discard conversations",
+    "forget conversations",
+    "erase conversations",
+    "erase conversations",
+    "reset memory",
+    "discard memory",
+    "delete memory",
+    "forget memory",
+    "erase memory",
+    "flushdb",
+    "flush_db"
+]
