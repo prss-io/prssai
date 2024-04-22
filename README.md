@@ -7,7 +7,7 @@
   - Install [PRSS Site Creator](https://prss.io/) (for GUI management and enhanced features)
   - `ollama pull dolphin-mistral:7b-v2.2.1` or [choose another model](https://github.com/ollama/ollama?tab=readme-ov-file#model-library) according to your preference.
   - Clone this repository
-  - Rename `./app/example.env` to `./app/.env` and edit accordingly.
+  - Rename [`./app/example.env`](https://github.com/prss-io/prssai/blob/master/app/example.env) to `./app/.env` and edit accordingly.
   - Open a terminal and run `./install` from the `./bin` directory.
 
   ### ✳️ Usage in PRSS
