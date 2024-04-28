@@ -5,8 +5,9 @@
   ### 📦 Setup
   - Install <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> and <a href="https://github.com/ollama/ollama" target="_blank">Ollama</a>
   - Install <a href="https://prss.io/" target="_blank">PRSS Site Creator</a> (for GUI management and enhanced features)
-  - `ollama pull dolphin-mistral:7b-v2.2.1` or <a href="https://github.com/ollama/ollama?tab=readme-ov-file#model-library" target="_blank">choose another model</a> according to your preference.
-  - Clone this repository
+  - Open a terminal and run `ollama pull dolphin-mistral:7b-v2.2.1`
+    - You can choose other models instead of dolphin-mistral. <a href="https://github.com/ollama/ollama?tab=readme-ov-file#model-library" target="_blank">Check out the list here</a>.
+  - Clone or [download](https://github.com/prss-io/prssai/archive/refs/heads/master.zip) this repository.
   - Rename <a href="https://github.com/prss-io/prssai/blob/master/app/example.env" target="_blank">`./app/example.env`</a> to `./app/.env` and edit accordingly.
   - Open a terminal and run `./install` from the `./bin` directory.
 
