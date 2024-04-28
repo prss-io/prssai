@@ -1,13 +1,13 @@
 <p>
   <a href="https://prss.io"><img src="https://github.com/prss-io/prssai/assets/25509135/e2eca5d6-27c3-4c72-9e50-d1843e8e909a" width="200" /></a>
-  <blockquote>PRSS AI Companion & Autoblogger. Research & Create articles for <a href="https://github.com/hodgef/PRSS">PRSS Site Creator</a>.</blockquote>
+  <blockquote>PRSS AI Companion & Autoblogger. Research & Create articles for <a href="https://github.com/hodgef/PRSS" target="_blank">PRSS Site Creator</a>.</blockquote>
 
   ### 📦 Setup
-  - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [Ollama](https://github.com/ollama/ollama)
-  - Install [PRSS Site Creator](https://prss.io/) (for GUI management and enhanced features)
-  - `ollama pull dolphin-mistral:7b-v2.2.1` or [choose another model](https://github.com/ollama/ollama?tab=readme-ov-file#model-library) according to your preference.
+  - Install <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> and <a href="https://github.com/ollama/ollama" target="_blank">Ollama</a>
+  - Install <a href="https://prss.io/" target="_blank">PRSS Site Creator</a> (for GUI management and enhanced features)
+  - `ollama pull dolphin-mistral:7b-v2.2.1` or <a href="https://github.com/ollama/ollama?tab=readme-ov-file#model-library" target="_blank">choose another model</a> according to your preference.
   - Clone this repository
-  - Rename [`./app/example.env`](https://github.com/prss-io/prssai/blob/master/app/example.env) to `./app/.env` and edit accordingly.
+  - Rename <a href="https://github.com/prss-io/prssai/blob/master/app/example.env" target="_blank">`./app/example.env`</a> to `./app/.env` and edit accordingly.
   - Open a terminal and run `./install` from the `./bin` directory.
 
   ### ✳️ Usage in PRSS
