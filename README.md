@@ -17,15 +17,19 @@
   #### Batch generate articles (autoblogging)
   Specify a number of topics for the AI to write about. Once complete, you will be able to review the returned text, discard entries, and transform the remaining texts to blog posts in one click.
 
-  ![image](https://github.com/prss-io/prssai/assets/25509135/da990026-cc5b-4550-a1e2-40e6683a3660)
-  
+![image](https://github.com/prss-io/prssai/assets/25509135/db128eea-4681-4c7e-8adb-54d695127fe6)
+
   ![image](https://github.com/prss-io/prssai/assets/25509135/ab1fe1ce-6d1c-4e38-8273-72234a4e6854)
 
   #### Prompt
 
-  Ask the model anything. It will have memory of the previous conversations and articles generated. To forget the history, prompt it with "erase history". The memory is stored locally in the [`prssai_redis` container](https://github.com/prss-io/prssai/blob/master/docker-compose.yml#L12).
+  Ask the model anything. The model will have memory of the previous conversations and articles generated. To forget the history, prompt it with "erase history". The memory is stored locally in the [`prssai_redis` container](https://github.com/prss-io/prssai/blob/master/docker-compose.yml#L12).
 
-  ![image](https://github.com/prss-io/prssai/assets/25509135/886f85a9-e60e-4315-b921-7ad7716ed52c)
+![image](https://github.com/prss-io/prssai/assets/25509135/3872161b-b582-4934-a7f4-89ab9e8ede8c)
+
+
+
+
 
   ### ✴️ Usage in Terminal
   To run the following commands, you must do so from the `./bin` directory after setup.
