@@ -17,15 +17,16 @@
   #### Batch generate articles (autoblogging)
   Specify a number of topics for the AI to write about. Once complete, you will be able to review the returned text, discard entries, and transform the remaining texts to blog posts in one click.
 
-![image](https://github.com/prss-io/prssai/assets/25509135/db128eea-4681-4c7e-8adb-54d695127fe6)
+  ![image](https://github.com/prss-io/prssai/assets/25509135/db128eea-4681-4c7e-8adb-54d695127fe6)
 
-  ![image](https://github.com/prss-io/prssai/assets/25509135/ab1fe1ce-6d1c-4e38-8273-72234a4e6854)
+  ![image](https://github.com/prss-io/prssai/assets/25509135/7f1406ff-04b3-4775-9d30-8aeb71e27c39)
+
 
   #### Prompt
 
   Ask the model anything. The model will have memory of the previous conversations and articles generated. To forget the history, prompt it with "erase history". The memory is stored locally in the [`prssai_redis` container](https://github.com/prss-io/prssai/blob/master/docker-compose.yml#L12).
 
-![image](https://github.com/prss-io/prssai/assets/25509135/3872161b-b582-4934-a7f4-89ab9e8ede8c)
+  ![image](https://github.com/prss-io/prssai/assets/25509135/3872161b-b582-4934-a7f4-89ab9e8ede8c)
 
 
 
