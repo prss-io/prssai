@@ -12,7 +12,7 @@
   - Open a terminal and run `./install` from the `./bin` directory.
 
   ### ✳️ Usage in PRSS
-  > The prssai features have been introduced as of PRSS version 1.9.0. To enable it, install it from the PRSS "Addons" page.
+  > The prssai features are included in PRSS version 1.9.0 and above. To enable it, visit the PRSS "Addons" page.
 
 <img src="https://github.com/prss-io/prssai/assets/25509135/17bdf818-4b60-4044-b2ca-62ff3793c976" width="800" />
 
