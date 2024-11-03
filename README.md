@@ -1,3 +1,5 @@
+### Deprecation Notice: This package is deprecated on PRSS versions 2.0 and above. In these versions, PRSSAI is built into PRSS. Thank you!
+
 <p>
   <a href="https://prss.io"><img src="https://github.com/prss-io/prssai/assets/25509135/e2eca5d6-27c3-4c72-9e50-d1843e8e909a" width="200" /></a>
   <blockquote>PRSS AI Companion & Autoblogger. Research & Create articles for <a href="https://github.com/hodgef/PRSS" target="_blank">PRSS Site Creator</a>.</blockquote>
